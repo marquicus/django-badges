@@ -8,29 +8,29 @@ from setuptools import setup
 
 setup(
     name='django-badges',
-    version='1.1.0',
+    version='1.1.1',
     author='James Robert',
     author_email='jiaaro@gmail.com',
-    description=('An easy to use app that provides Stack Overflow style badges'
-                'with a minimum ammount of effort in django'),
+    description=('An easy to use app that provides Stack Overflow style badges \
+        with a minimum ammount of effort in django'),
     license='GPLv3',
     keywords='django badges social',
     url='http://djangobadges.com',
     packages=['badges', 'badges.templatetags', 'badges.migrations'],
     package_data={'badges': ['badges/templates/badges/*.html']},
     install_requires=[
-        "django >= 1.7",
+        "django >= 2.0",
         "Pillow",
-        "future"
+        "future",
+        "tox-pyenv",
     ],
     long_description=__doc__,
     classifiers=[
-    	'Development Status :: 5 - Production/Stable',
+        'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: GNU General Public License (GPL)',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Framework :: Django',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',

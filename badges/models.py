@@ -22,6 +22,7 @@ else:
         ("4", "Diamond"),
     )
 
+
 class Badge(models.Model):
     id = models.CharField(max_length=255, primary_key=True)
     user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="badges", through='BadgeToUser')
@@ -69,7 +70,7 @@ class Badge(models.Model):
         Gives the number awarded total. Pass in an argument to
         get the number per user, or per queryset.
         """
-        kwargs = {'badge':self}
+        kwargs = {'badge': self}
         if user_or_qs is None:
             pass
         elif isinstance(user_or_qs, get_user_model()):

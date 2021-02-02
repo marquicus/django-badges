@@ -1,7 +1,4 @@
-try:
-    from django.db.models.signals import post_migrate as db_ready
-except ImportError:
-    from django.db.models.signals import post_syncdb as db_ready
+from django.db.models.signals import post_migrate as db_ready
 
 
 def sync_badges_to_db(**kwargs):
