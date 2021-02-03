@@ -29,7 +29,10 @@ def badge_count(user_or_qs=None):
     Example:
 
      >>> badge_count(User.objects.filter(username='admin'))
-     [{'count': 0, 'badge__level': '1'}, {'count': 0, 'badge__level': '2'}, {'count': 0, 'badge__level': '3'}, {'count': 0, 'badge__level': '4'}]
+     [{'count': 0, 'badge__level': '1'},
+      {'count': 0, 'badge__level': '2'},
+      {'count': 0, 'badge__level': '3'},
+      {'count': 0, 'badge__level': '4'}]
 
     Uses a single database query.
     """
